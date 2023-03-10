@@ -32,38 +32,38 @@ public class CalendarActivity extends AppCompatActivity {
         List<EventDay> events = new ArrayList<>();
 
         Calendar calendar = Calendar.getInstance();
-//        events.add(new EventDay(calendar, DrawableUtils.getCircleDrawableWithText(this, "M")));
+        events.add(new EventDay(calendar, DrawableUtils.getCircleDrawableWithText(this, "M")));
 
-//        Calendar calendar1 = Calendar.getInstance();
-//        calendar1.add(Calendar.DAY_OF_MONTH, 10);
-//        events.add(new EventDay(calendar1, R.drawable.sample_icon_2));
-//
-//        Calendar calendar2 = Calendar.getInstance();
-//        calendar2.add(Calendar.DAY_OF_MONTH, 10);
-//        events.add(new EventDay(calendar2, R.drawable.sample_icon_3, Color.parseColor("#228B22")));
-//
-//        Calendar calendar3 = Calendar.getInstance();
-//        calendar3.add(Calendar.DAY_OF_MONTH, 7);
-//        events.add(new EventDay(calendar3, R.drawable.sample_four_icons));
-//
-//        Calendar calendar4 = Calendar.getInstance();
-//        calendar4.add(Calendar.DAY_OF_MONTH, 13);
-//        events.add(new EventDay(calendar4, DrawableUtils.getThreeDots(this)));
+        Calendar calendar1 = Calendar.getInstance();
+        calendar1.add(Calendar.DAY_OF_MONTH, 10);
+        events.add(new EventDay(calendar1, R.drawable.sample_icon_2));
+
+        Calendar calendar2 = Calendar.getInstance();
+        calendar2.add(Calendar.DAY_OF_MONTH, 10);
+        events.add(new EventDay(calendar2, R.drawable.sample_icon_3, Color.parseColor("#228B22")));
+
+        Calendar calendar3 = Calendar.getInstance();
+        calendar3.add(Calendar.DAY_OF_MONTH, 7);
+        events.add(new EventDay(calendar3, R.drawable.sample_four_icons));
+
+        Calendar calendar4 = Calendar.getInstance();
+        calendar4.add(Calendar.DAY_OF_MONTH, 13);
+        events.add(new EventDay(calendar4, DrawableUtils.getThreeDots(this)));
 
         CalendarView calendarView = (CalendarView) findViewById(R.id.calendarView);
 
-//        Calendar min = Calendar.getInstance();
-//        min.add(Calendar.MONTH, -2);
-//
-//        Calendar max = Calendar.getInstance();
-//        max.add(Calendar.MONTH, 2);
-//
-//        calendarView.setMinimumDate(min);
-//        calendarView.setMaximumDate(max);
+        Calendar min = Calendar.getInstance();
+        min.add(Calendar.MONTH, -2);
 
-//        calendarView.setEvents(events);
+        Calendar max = Calendar.getInstance();
+        max.add(Calendar.MONTH, 2);
 
-//        calendarView.setDisabledDays(getDisabledDays());
+        calendarView.setMinimumDate(min);
+        calendarView.setMaximumDate(max);
+
+        calendarView.setEvents(events);
+
+        calendarView.setDisabledDays(getDisabledDays());
 
         calendarView.setOnDayClickListener(eventDay ->
                 Toast.makeText(getApplicationContext(),

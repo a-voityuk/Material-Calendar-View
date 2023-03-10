@@ -415,20 +415,6 @@ class CalendarView @JvmOverloads constructor(
     }
 
     /**
-     * This method is used to move to prev month
-     */
-    fun moveToPrevMonth() {
-        calendarViewPager.currentItem = calendarViewPager.currentItem - 1
-    }
-
-    /**
-     * This method is used to move to next month
-     */
-    fun moveToNextMonth() {
-        calendarViewPager.currentItem = calendarViewPager.currentItem + 1
-    }
-
-    /**
      * This method removes all selected days from calendar
      */
     fun clearSelectedDays() {
