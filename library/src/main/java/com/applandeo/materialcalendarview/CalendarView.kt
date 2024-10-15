@@ -93,6 +93,7 @@ class CalendarView @JvmOverloads constructor(
     private fun initCalendarProperties(typedArray: TypedArray) = with(calendarProperties) {
         headerColor = typedArray.getColor(R.styleable.CalendarView_headerColor, 0)
         headerLabelColor = typedArray.getColor(R.styleable.CalendarView_headerLabelColor, 0)
+        headerLabelSize = typedArray.getFloat(R.styleable.CalendarView_headerLabelSize, 0F)
         abbreviationsBarColor = typedArray.getColor(R.styleable.CalendarView_abbreviationsBarColor, 0)
         abbreviationsLabelsColor = typedArray.getColor(R.styleable.CalendarView_abbreviationsLabelsColor, 0)
         abbreviationsLabelsSize = typedArray.getDimension(R.styleable.CalendarView_abbreviationsLabelsSize, 0F)
@@ -132,6 +133,7 @@ class CalendarView @JvmOverloads constructor(
             rootView.setAbbreviationsBarVisibility(abbreviationsBarVisibility)
             rootView.setNavigationVisibility(navigationVisibility)
             rootView.setHeaderLabelColor(headerLabelColor)
+            rootView.setHeaderLabelSize(headerLabelSize)
             rootView.setAbbreviationsBarColor(abbreviationsBarColor)
             rootView.setAbbreviationsLabels(abbreviationsLabelsColor, firstDayOfWeek)
             rootView.setAbbreviationsLabelsSize(abbreviationsLabelsSize)
@@ -171,6 +173,11 @@ class CalendarView @JvmOverloads constructor(
     fun setHeaderLabelColor(@ColorRes color: Int) = with(calendarProperties) {
         headerLabelColor = color
         rootView.setHeaderLabelColor(headerLabelColor)
+    }
+
+    fun setHeaderLabelSize(size: Float) = with(calendarProperties) {
+        headerLabelSize = size
+        rootView.setHeaderLabelSize(headerLabelSize)
     }
 
     fun setPreviousButtonImage(drawable: Drawable) = with(calendarProperties) {

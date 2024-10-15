@@ -72,6 +72,8 @@ class DatePickerBuilder(
     @Deprecated("Use headerLabelColor(color)", ReplaceWith("headerLabelColor(color)"))
     fun setHeaderLabelColor(@ColorRes color: Int) = headerLabelColor(color)
 
+    fun headerLabelSize(size: Float) = also { calendarProperties.headerLabelSize = size }
+
     /**
      * Sets the drawable resource to use for the previous button in the date picker dialog
      *

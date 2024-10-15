@@ -61,6 +61,10 @@ internal fun View.setHeaderLabelColor(color: Int) {
     this.currentDateLabel.setTextColor(color)
 }
 
+internal fun View.setHeaderLabelSize(size: Float) {
+    this.currentDateLabel.setTextSize(size)
+}
+
 internal fun View.setHeaderTypeface(typeface: Typeface?) {
     if (typeface == null) return
     this.currentDateLabel.typeface = typeface

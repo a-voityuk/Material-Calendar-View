@@ -32,6 +32,8 @@ class CalendarProperties(private val context: Context) {
     var headerLabelColor: Int = 0
         get() = if (field <= 0) field else context.parseColor(field)
 
+    var headerLabelSize: Float = 16F
+
     var selectionColor: Int = 0
         get() = if (field == 0) context.parseColor(R.color.defaultColor) else field
 

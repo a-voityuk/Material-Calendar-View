@@ -3,6 +3,7 @@
     <declare-styleable name="CalendarView">
         <attr name="headerColor" format="color" />
         <attr name="headerLabelColor" format="color" />
+        <attr name="headerLabelSize" format="dimension" />
         <attr name="previousButtonSrc" format="integer" />
         <attr name="forwardButtonSrc" format="integer" />
         <attr name="todayLabelColor" format="color" />
